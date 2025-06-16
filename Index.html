@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de DAGUIDAM Edwige Guedjeo</title>
+    <!-- Chargement de Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuration de la police Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800; /* Fond gris clair, texte gris foncé */
+        }
+        /* Style pour les liens de navigation au survol */
+        .nav-link:hover {
+            @apply text-blue-600;
+        }
+        /* Style pour les boutons primaires */
+        .btn-primary {
+            @apply bg-blue-500 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-600 transition-all duration-300 ease-in-out;
+        }
+        /* Style pour les boutons secondaires */
+        .btn-secondary {
+            @apply bg-white text-blue-700 px-6 py-3 rounded-xl shadow-lg hover:bg-blue-50 transition-all duration-300 ease-in-out border border-blue-500;
+        }
+        /* Style pour les cartes de réalisation (anciennement projet) */
+        .realisation-card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105;
+        }
+        /* Style pour les icônes */
+        .icon {
+            @apply text-blue-500;
+        }
+        /* Styles spécifiques pour le focus des éléments interactifs */
+        :focus {
+            outline: 2px solid theme('colors.blue.500');
+            outline-offset: 2px;
+            border-radius: theme('borderRadius.DEFAULT');
+        }
+        /* Pour le défilement fluide */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Barre de Navigation Fixe -->
+    <nav class="fixed top-0 left-0 right-0 bg-white bg-opacity-95 shadow-md z-50 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#accueil" class="text-2xl font-bold text-blue-700">Edwige DAGUIDAM</a>
+            <div class="space-x-8">
+                <a href="#accueil" class="nav-link text-lg font-medium text-gray-700">Accueil</a>
+                <a href="#a-propos" class="nav-link text-lg font-medium text-gray-700">À Propos</a>
+                <a href="#realisations" class="nav-link text-lg font-medium text-gray-700">Réalisations</a>
+                <a href="#contact" class="nav-link text-lg font-medium text-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil (Hero Section) -->
+    <section id="accueil" class="relative flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-700 to-blue-500 text-white p-4 text-center overflow-hidden pt-16">
+        <!-- Overlay pour un effet visuel -->
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <!-- Contenu centré de la section Hero -->
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <!-- Image de profil ou placeholder -->
+            <img src="dagui.jpg" alt="dagui" class="w-80 h-80 rounded-full mx-auto mb-6 border-4 border-white shadow-xl">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">Bienvenue, je suis DAGUIDAM Edwige Guedjeo</h1>
+             Mon contact (+237) 6 56 84 10 05 / 6 53 80 80 87 
+            <p class="text-2xl md:text-3xl font-light mb-8">Développeuse IA & IoT | Spécialiste en Systèmes Intelligents</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#realisations" class="btn-primary">Voir mes Réalisations</a>
+                <a href="#a-propos" class="btn-secondary">En savoir plus sur moi</a>
+                <a href="#contact" class="btn-secondary">Contactez-moi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="a-propos" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-700">À Propos de Moi</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="dagui.jpg" alt="dagui" class="rounded-xl shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2 text-lg leading-relaxed text-gray-700">
+                    <p class="mb-4">
+                        Passionnée par l'innovation technologique, je suis une développeuse spécialisée en Intelligence Artificielle et Internet des Objets (IoT). Mon objectif est de concevoir et de mettre en œuvre des solutions intelligentes qui répondent à des défis concrets et améliorent la vie quotidienne.
+                    </p>
+                    <p class="mb-4">
+                        Mon parcours m'a permis d'acquérir une expertise solide en modélisation d'IA, en analyse de données, en intégration de systèmes embarqués et en développement web. J'ai également une expérience en gestion administrative en tant que secrétaire du Principal au Collège Saint Jean Paul II de Banyo, ce qui a renforcé mes compétences organisationnelles et de communication.
+                    </p>
+                    <p>
+                        Je suis constamment à la recherche de nouvelles opportunités pour apprendre et contribuer à des projets qui ont un impact positif. N'hésitez pas à me contacter pour discuter de collaborations !
+                    </p>
+                </div>
+            </div>
+
+            <!-- Nouvelle Section: Formation -->
+            <div class="mt-16 pt-16 border-t border-gray-200">
+                <h3 class="text-3xl font-bold text-center mb-10 text-blue-700">Ma Formation</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg text-gray-700">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-blue-500">
+                        <p class="font-semibold text-xl mb-2">Diplôme de Professeur d'Enseignement Secondaire (DIPES II)</p>
+                        <p>École Normale Supérieure de Bertoua, Cameroun</p>
+                        <p class="text-gray-600">Année: 2025</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-blue-500">
+                        <p class="font-semibold text-xl mb-2">Diplôme de Licence Technologie</p>
+                        <p>IUT, Ngaoundéré-Cameroun</p>
+                        <p class="text-gray-600">Années: 2020</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-blue-500">
+                        <p class="font-semibold text-xl mb-2">Diplôme Universitaire de Technologie (DUT)</p>
+                        <p>IUT, Ngaoundéré-Cameroun</p>
+                        <p class="text-gray-600">Années: 2019</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Compétences intégrée dans À Propos pour la concision -->
+            <div class="mt-16 pt-16 border-t border-gray-200">
+                <h3 class="text-3xl font-bold text-center mb-10 text-blue-700">Mes Compétences</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Catégorie 1: IA & Machine Learning -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-500">
+                        <h4 class="text-2xl font-semibold mb-4 text-gray-900">IA & Machine Learning</h4>
+                        <ul class="list-disc list-inside text-gray-700 text-lg space-y-2">
+                            <li>Python (Scikit-learn, Pandas, NumPy)</li>
+                            <li>Deep Learning (TensorFlow, Keras)</li>
+                            <li>Algorithmes de Classification (MLP, SVM, Forêts Aléatoires)</li>
+                            <li>Analyse de Données et Visualisation</li>
+                        </ul>
+                    </div>
+                    <!-- Catégorie 2: IoT & Systèmes Embarqués -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-500">
+                        <h4 class="text-2xl font-semibold mb-4 text-gray-900">IoT & Systèmes Embarqués</h4>
+                        <ul class="list-disc list-inside text-gray-700 text-lg space-y-2">
+                            <li>Arduino, ESP32-CAM, Raspberry Pi</li>
+                            <li>Capteurs (Infrarouges, Ultrasons, etc.)</li>
+                            <li>Communication (Wi-Fi, Bluetooth)</li>
+                            <li>Microcontrôleurs et Microprocesseurs</li>
+                        </ul>
+                    </div>
+                    <!-- Catégorie 3: Développement & Outils -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-purple-500">
+                        <h4 class="text-2xl font-semibold mb-4 text-gray-900">Développement & Outils</h4>
+                        <ul class="list-disc list-inside text-gray-700 text-lg space-y-2">
+                            <li>Programmation : Python, C/C++</li>
+                            <li>Développement Web (HTML, CSS, JavaScript, PHP)</li>
+                            <li>Version Control : Git, GitHub</li>
+                            <li>Environnements : Anaconda</li>
+                            <li>Réseautique</li>
+                            <li>Gestion de Projet : Agile/Scrum</li>
+                            <li>Logiciels : Word, Excel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nouvelle Section: Expérience Professionnelle (Non-Projet) -->
+            <div class="mt-16 pt-16 border-t border-gray-200">
+                <h3 class="text-3xl font-bold text-center mb-10 text-blue-700">Mon Expérience Professionnelle</h3>
+                <div class="space-y-8 text-gray-700">
+                    <!-- Expérience 1: Lycée Bilingue de Bertoua -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-orange-500">
+                        <p class="font-semibold text-xl mb-2">Enseignante (Stagiaire)</p>
+                        <p class="text-lg">Lycée Bilingue de Bertoua</p>
+                        <p class="text-gray-600 mb-2">Jan. - Avril 2025</p>
+                        <ul class="list-disc list-inside text-base">
+                            <li>Enseignement de maintenance informatique aux classes de 1ère TI.</li>
+                            <li>Enseignement de programmation aux classes de Terminale TI.</li>
+                            <li>Préparation et animation de cours techniques.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-pink-500">
+                        <p class="font-semibold text-xl mb-2">Secrétaire de la Principale (Collège Jean Paul II de Banyo)</p>
+                         <p class="text-gray-600 mb-2">Sept 2022 - Juin 2023</p>
+                         <ul class="list-disc list-inside text-base">
+                         <li>Vérification et enregistrement des notes de chaque élève dans la base se données.</li>
+                         <li>Impression des épreuves des evaluations.</li>
+                          <li>Etc.</li>
+                         </ul>
+                    </div>
+                    <!-- Expérience 2: CDTIC -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-orange-500">
+                        <p class="font-semibold text-xl mb-2">Cellule information</p>
+                        <p class="text-lg">CDTIC</p>
+                        <p class="text-gray-600 mb-2">Oct. 2020 - Juil. 2021</p>
+                        <ul class="list-disc list-inside text-base">
+                            <li>Vérification des outils informatiques.</li>
+                            <li>Vérification du serveur dans la salle froide.</li>
+                            <li>Contribution aux opérations de maintenance et de sécurité des infrastructures.</li>
+                        </ul>
+                    </div>
+                    <!-- Expérience 3: TPM -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-orange-500">
+                        <p class="font-semibold text-xl mb-2">Employeur à l'usine de fabrication</p>
+                        <p class="text-lg">TPM, Douala, Cameroun</p>
+                        <p class="text-gray-600 mb-2">Juin. - Août 2019</p>
+                        <ul class="list-disc list-inside text-base">
+                            <li>Fabrication de tôles bac, tôles en aluminium, tôles torsadées.</li>
+                            <li>Participation aux processus de production industrielle.</li>
+                            <li>Etc.</li>
+                        </ul>
+                    </div>
+                    <!-- Expérience 4: CENADI -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-orange-500">
+                        <p class="font-semibold text-xl mb-2">Ouvrier</p>
+                        <p class="text-lg">CENADI, Yaoundé, Cameroun</p>
+                        <p class="text-gray-600 mb-2">Juil. - Août 2018</p>
+                        <ul class="list-disc list-inside text-base">
+                            <li>Vérification du bon de solde.</li>
+                            <li>Vérification du fonctionnement des machines.</li>
+                            <li>Etc.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nouvelle Section: Langues -->
+            <div class="mt-16 pt-16 border-t border-gray-200">
+                <h3 class="text-3xl font-bold text-center mb-10 text-blue-700">Langues</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg text-gray-700">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-indigo-500">
+                        <p class="font-semibold text-xl mb-2">Français: <span class="font-normal">Courant</span></p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-indigo-500">
+                        <p class="font-semibold text-xl mb-2">Espagnol: <span class="font-normal">Passable</span></p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-indigo-500">
+                        <p class="font-semibold text-xl mb-2">Anglais: <span class="font-normal">Passable</span></p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-indigo-500">
+                        <p class="font-semibold text-xl mb-2">Arabe: <span class="font-normal">Passable</span></p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-indigo-500">
+                        <p class="font-semibold text-xl mb-2">Foulbé: <span class="font-normal">Courant</span></p>
+                    </div>
+                      <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-indigo-500">
+                        <p class="font-semibold text-xl mb-2">Mafa: <span class="font-normal">Courant</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nouvelle Section: Centres d'Intérêt -->
+            <div class="mt-16 pt-16 border-t border-gray-200">
+                <h3 class="text-3xl font-bold text-center mb-10 text-blue-700">Centres d'Intérêt</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg text-gray-700">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-pink-500">
+                        <p class="font-semibold text-xl mb-2">Voyages</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-pink-500">
+                        <p class="font-semibold text-xl mb-2">Bénévolat (dans une association)</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-pink-500">
+                        <p class="font-semibold text-xl mb-2">Sport (Athlétisme, Volley-ball)</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-pink-500">
+                        <p class="font-semibold text-xl mb-2">Couture femmes</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border-l-4 border-pink-500">
+                        <p class="font-semibold text-xl mb-2">Coiffure femmes</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Réalisations (anciennement Projets) -->
+    <section id="realisations" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-700">Mes Réalisations</h2>
+
+            <!-- Réalisation 1: Système Intelligent de Contrôle Routier et d'Orientation -->
+            <div class="realisation-card mb-12 flex flex-col md:flex-row items-center md:space-x-8 p-6">
+                <img src="https://placehold.co/600x400/ADD8E6/000000?text=Syst%C3%A8me+Contr%C3%B4le+Routier" alt="Système Intelligent de Contrôle Routier" class="md:w-1/2 rounded-lg shadow-md mb-6 md:mb-0">
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-semibold text-gray-900 mb-4">Système Intelligent de Contrôle Routier et d'Orientation(Bertoua,2025)</h3>
+                    <p class="text-gray-700 mb-4 text-lg">
+                        Développement d'une solution innovante basée sur l'Internet des Objets (IoT) et l'Intelligence A<wbr>rtificielle (IA) pour optimiser la gestion du trafic urbain dans la ville de Bertoua, particulièrement sur l'axe Service du Gouverneur - Carrefour Maison MTN.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-base mb-4 space-y-1">
+                        <li>Problème Résolu : Congestion routière, difficultés d'orientation, pollution urbaine.</li>
+                        <li>Technologies : Capteurs Infrarouges, Arduino Uno / ESP32-CAM (IoT), Python, TensorFlow / Keras (MLP pour l'IA).</li>
+                        <li>Résultats Clés : Modèle de classification du trafic avec une précision de 91-100%, réduisant les embouteillages et améliorant la fluidité.</li>
+                        <li>Impact : Amélioration significative de la qualité de vie des citoyens et de l'efficience du réseau routier.</li>
+                    </ul>
+                    <!-- Lien GitHub pour cette réalisation -->
+                    <a href="https://github.com/votre_profil/votre_repo_projet" target="_blank" class="btn-primary text-base">Voir la Réalisation (GitHub)</a>
+                </div>
+            </div>
+
+            <!-- Nouvelle Réalisation 2: Développement E-commerce pour TPM SI (2019) -->
+            <div class="realisation-card mb-12 flex flex-col md:flex-row-reverse items-center md:space-x-8 md:space-x-reverse p-6">
+                <img src="https://placehold.co/600x400/C2DFFF/000000?text=E-commerce+TPM+SI" alt="Développement E-commerce TPM SI" class="md:w-1/2 rounded-lg shadow-md mb-6 md:mb-0">
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-semibold text-gray-900 mb-4">Développement E-commerce pour TPM SI (Douala, 2019)</h3>
+                    <p class="text-gray-700 mb-4 text-lg">
+                        Conception et mise en œuvre d'une plateforme de commerce électronique complète pour la société TPM SI à Douala, permettant la vente en ligne de leurs produits et services.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-base mb-4 space-y-1">
+                        <li>Rôle : Développeur Full-stack.</li>
+                        <li>Fonctionnalités : Gestion des produits, paniers d'achat, processus de commande, intégration de paiement.</li>
+                        <li>Technologies : HTML, CSS, JavaScript, PHP (ou un framework comme Laravel/Symfony), base de données (ex: MySQL).</li>
+                        <li>Impact : Augmentation de la portée commerciale et facilitation des transactions pour l'entreprise.</li>
+                    </ul>
+                    <!-- Lien GitHub pour cette réalisation -->
+                    <a href="https://github.com/votre_profil/votre_repo_ecommerce" target="_blank" class="btn-primary text-base">Voir la Réalisation (GitHub)</a>
+                </div>
+            </div>
+
+            <!-- Nouvelle Réalisation 3: Système de Sécurité de Proxy basé sur LDAP (Stage CDTIC, 2020) -->
+            <div class="realisation-card mb-12 flex flex-col md:flex-row items-center md:space-x-8 p-6">
+                <img src="https://placehold.co/600x400/D4F1F4/000000?text=Proxy+LDAP" alt="Système de Sécurité de Proxy LDAP" class="md:w-1/2 rounded-lg shadow-md mb-6 md:mb-0">
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-semibold text-gray-900 mb-4">Système de Sécurité de Proxy basé sur LDAP (Stage CDTIC, 2020)</h3>
+                    <p class="text-gray-700 mb-4 text-lg">
+                        Conception et implémentation d'un système de sécurité avancé pour un serveur proxy, utilisant le protocole LDAP (Lightweight Directory Access Protocol) pour une gestion centralisée des utilisateurs et des droits d'accès.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-base mb-4 space-y-1">
+                        <li>Objectif : Renforcer la sécurité du réseau interne, contrôler et authentifier les accès au travers du proxy.</li>
+                        <li>Technologies : LDAP, Serveur Proxy (ex: Squid), Linux, Scripting (Bash/Python pour l'intégration).</li>
+                        <li>Apprentissage : Expertise en sécurité réseau, gestion d'annuaires et authentification centralisée.</li>
+                    </ul>
+                    <!-- Lien GitHub pour cette réalisation -->
+                    <a href="https://github.com/votre_profil/votre_repo_proxy_ldap" target="_blank" class="btn-primary text-base">Voir la Réalisation (GitHub)</a>
+                </div>
+            </div>
+
+            <!-- Ajouter d'autres réalisations ici si nécessaire -->
+
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-blue-700">Contactez-moi</h2>
+            <p class="text-center text-lg text-gray-700 mb-8">
+                N'hésitez pas à me contacter pour toute question, opportunité de collaboration ou simplement pour échanger !
+            </p>
+            <div class="bg-gray-100 p-8 rounded-xl shadow-lg">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="nom" class="block text-lg font-medium text-gray-700 mb-2">Nom Complet</label>
+                        <input type="text" id="nom" name="nom" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 transition-all duration-200">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Adresse E-mail</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 transition-all duration-200" value=" ">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Votre Message</label>
+                        <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 transition-all duration-200"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary w-full md:w-auto">Envoyer le Message</button>
+                    </div>
+                </form>
+                <!-- Coordonnées et liens sociaux -->
+                <div class="mt-8 text-center text-gray-600">
+                    <p class="mb-2">Ou retrouvez-moi sur :</p>
+                    <div class="flex justify-center space-x-6 text-2xl text-blue-600">
+                        <a href="mailto:edwigedagui@gmail.com" class="hover:text-blue-800 transition-colors duration-200" title="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </a>
+                        <a href="tel:+237656841005" class="hover:text-blue-800 transition-colors duration-200" title="Téléphone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/in/votre_profil_linkedin" target="_blank" class="hover:text-blue-800 transition-colors duration-200" title="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="https://github.com/votre_profil_github" target="_blank" class="hover:text-blue-800 transition-colors duration-200" title="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.44-.78-3.46 0 0-1 0-2 1.5-1-0.3-2-0.3-3 0-1.5-1.5-2.5-1.5-2.5-1.5a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.44-.78-3.46 0 0-1 0-2 1.5-1-0.3-2-0.3-3 0-1.5-1.5-2.5-1.5-2.5-1.5c-0.1 0.5-0.2 1-0.2 2 0 2 2 3.5 4 4.5V22"></path></svg>
+                        </a>
+                        <!-- Icône Facebook (SVG de Lucide) -->
+                        <a href="https://facebook.com/votre_profil_facebook" target="_blank" class="hover:text-blue-800 transition-colors duration-200" title="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <!-- Icône TikTok (SVG de Lucide) -->
+                        <a href="https://tiktok.com/@votre_profil_tiktok" target="_blank" class="hover:text-blue-800 transition-colors duration-200" title="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tiktok"><path d="M9 13.5V6.5L12 8V11.5L15 13.5V7.5L18 9V12.5L21 14.5V10.5L24 12V15.5L27 17.5V13.5L30 15V18.5L33 20.5V16.5L36 18V21.5L39 23.5V19.5L42 21V24.5L45 26.5V22.5L48 24V27.5L51 29.5V25.5L54 27V30.5L57 32.5V28.5L60 30V33.5L63 35.5V31.5L66 33V36.5L69 38.5V34.5L72 36V39.5L75 41.5V37.5L78 39V42.5L81 44.5V40.5L84 42V45.5L87 47.5V43.5L90 45V48.5L93 50.5V46.5L96 48V51.5L99 53.5V49.5L102 51V54.5L105 56.5V52.5L108 54V57.5L111 59.5V55.5L114 57V60.5L117 62.5V58.5L120 60V63.5L123 65.5V61.5L126 63V66.5L129 68.5V64.5L132 66V69.5L135 71.5V67.5L138 69V72.5L141 74.5V70.5L144 72V75.5L147 77.5V73.5L150 75V78.5L153 80.5V76.5L156 78V81.5L159 83.5V79.5L162 81V84.5L165 86.5V82.5L168 84V87.5L171 89.5V85.5L174 87V90.5L177 92.5V88.5L180 90V93.5L183 95.5V91.5L186 93V96.5L189 98.5V94.5L192 96V99.5L195 101.5V97.5L198 99V102.5L201 104.5V100.5L204 102V105.5L207 107.5V103.5L210 105V108.5L213 110.5V106.5L216 108V111.5L219 113.5V109.5L222 111V114.5L225 116.5V112.5L228 114V117.5L231 119.5V115.5L234 117V120.5L237 122.5V118.5L240 120V123.5L243 125.5V121.5L246 123V126.5L249 128.5V124.5L252 126V129.5L255 131.5V127.5L258 129V132.5L261 134.5V130.5L264 132V135.5L267 137.5V133.5L270 135V138.5L273 140.5V136.5L276 138V141.5L279 143.5V139.5L282 141V144.5L285 146.5V142.5L288 144V147.5L291 149.5V145.5L294 147V150.5L297 152.5V148.5L300 150V153.5L303 155.5V151.5L306 153V156.5L309 158.5V154.5L312 156V159.5L315 161.5V157.5L318 159V162.5L321 164.5V160.5L324 162V165.5L327 167.5V163.5L330 165V168.5L333 170.5V166.5L336 168V171.5L339 173.5V169.5L342 171V174.5L345 176.5V172.5L348 174V177.5L351 179.5V175.5L354 177V180.5L357 182.5V178.5L360 180V183.5L363 185.5V181.5L366 183V186.5L369 188.5V184.5L372 186V189.5L375 191.5V187.5L378 189V192.5L381 194.5V190.5L384 192V195.5L387 197.5V193.5L390 195V198.5L393 200.5V196.5L396 198V201.5L399 203.5V199.5L402 201V204.5L405 206.5V202.5L408 204V207.5L411 209.5V205.5L414 207V210.5L417 212.5V208.5L420 210V213.5L423 215.5V211.5L426 213V216.5L429 218.5V214.5L432 216V219.5L435 221.5V217.5L438 219V222.5L441 224.5V220.5L444 222V225.5L447 227.5V223.5L450 225V228.5L453 230.5V226.5L456 228V231.5L459 233.5V229.5L462 231V234.5L465 236.5V232.5L468 234V237.5L471 239.5V235.5L474 237V240.5L477 242.5V238.5L480 240V243.5L483 245.5V241.5L486 243V246.5L489 248.5V244.5L492 246V249.5L495 251.5V247.5L498 249V252.5L501 254.5V250.5L504 252V255.5L507 257.5V253.5L510 255V258.5L513 260.5V256.5L516 258V261.5L519 263.5V259.5L522 261V264.5L525 266.5V262.5L528 264V267.5L531 269.5V265.5L534 267V270.5L537 272.5V268.5L540 270V273.5L543 275.5V271.5L546 273V276.5L549 278.5V274.5L552 276V279.5L555 281.5V277.5L558 279V282.5L561 284.5V280.5L564 282V285.5L567 287.5V283.5L570 285V288.5L573 290.5V286.5L576 288V291.5L579 293.5V289.5L582 291V294.5L585 296.5V292.5L588 294V297.5L591 299.5V295.5L594 297V300.5L597 302.5V298.5L600 300V303.5L603 305.5V301.5L606 303V306.5L609 308.5V304.5L612 306V309.5L615 311.5V307.5L618 309V312.5L621 314.5V310.5L624 312V315.5L627 317.5V313.5L630 315V318.5L633 320.5V316.5L636 318V321.5L639 323.5V319.5L642 321V324.5L645 326.5V322.5L648 324V327.5L651 329.5V325.5L654 327V330.5L657 332.5V328.5L660 330V333.5L663 335.5V331.5L666 333V336.5L669 338.5V334.5L672 336V339.5L675 341.5V337.5L678 339V342.5L681 344.5V340.5L684 342V345.5L687 347.5V343.5L690 345V348.5L693 350.5V346.5L696 348V351.5L699 353.5V349.5L702 351V354.5L705 356.5V352.5L708 354V357.5L711 359.5V355.5L714 357V360.5L717 362.5V358.5L720 360V363.5L723 365.5V361.5L726 363V366.5L729 368.5V364.5L732 366V369.5L735 371.5V367.5L738 369V372.5L741 374.5V370.5L744 372V375.5L747 377.5V373.5L750 375V378.5L753 380.5V376.5L756 378V381.5L759 383.5V379.5L762 381V384.5L765 386.5V382.5L768 384V387.5L771 389.5V385.5L774 387V390.5L777 392.5V388.5L780 390V393.5L783 395.5V391.5L786 393V396.5L789 398.5V394.5L792 396V399.5L795 401.5V397.5L798 399V402.5L801 404.5V400.5L804 402V405.5L807 407.5V403.5L810 405V408.5L813 410.5V406.5L816 408V411.5L819 413.5V409.5L822 411V414.5L825 416.5V412.5L828 414V417.5L831 419.5V415.5L834 417V420.5L837 422.5V418.5L840 420V423.5L843 425.5V421.5L846 423V426.5L849 428.5V424.5L852 426V429.5L855 431.5V427.5L858 429V432.5L861 434.5V430.5L864 432V435.5L867 437.5V433.5L870 435V438.5L873 440.5V436.5L876 438V441.5L879 443.5V439.5L882 441V444.5L885 446.5V442.5L888 444V447.5L891 449.5V445.5L894 447V450.5L897 452.5V448.5L900 450V9z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 DAGUIDAM Edwige Guedjeo. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
